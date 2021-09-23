@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Contamos con un equipo especializado, que se encarga de responder a la brevedad todas las consultas realizadas a través de cualquiera de nnuestros canales de atención.">
+    <meta name="keywords" content="CANALES DE ATENCIÓN, MAIL DE CONTACTO, WHATSAPP">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Techkingsbog-contacto</title>
+  </head>
+  <body class="fondo">
+    <section>
+      <header class="header">
+        <article>
+          <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid logo">
+              <img src="../multimedia/logo1.jpg" alt="logo" />
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a
+                      class="opcionesNav"
+                      aria-current="page"
+                      href="../index.html"
+                      >Inicio</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="opcionesNav" href="../pages/nosotros.html"
+                      >Nosotros</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="opcionesNav" href="../pages/productos.html"
+                      >Productos</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="opcionesNav"
+                      href="../pages/preguntasfrecuentes.html"
+                      >Preguntas Frecuentes</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="opcionesNav" href="../pages/contacto.html"
+                      >Contacto</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </article>
+      </header>
+    </section>
+    <section class="contacto">
+      <p>Dejanos tu consulta, y te contactaremos a la brevedad.</p>
+      <form>
+        <div>
+          <label for="Nombre">Nombre:</label>
+          <input
+            required
+            name="Nombre"
+            id="Nombre"
+            type="text"
+            placeholder="Ej: Tania Polania"
+          />
+        </div>
+        <div>
+          <label for="Teléfono">Teléfono:</label>
+          <input
+            required
+            name="Teléfono"
+            id="Teléfono"
+            type="text"
+            placeholder="15 2222 2222"
+          />
+        </div>
+        <div>
+          <label for="Mail">Mail:</label>
+          <input
+            required
+            type="email"
+            id="Mail"
+            name="Mail"
+            placeholder="tania@gmail.com"
+          />
+        </div>
+        <div>
+          <label for="Preferencia de contacto">Preferencia de contacto:</label>
+          <select name="Preferencia de contacto" id="Preferencia de contacto">
+            <option value="Mail">Mail</option>
+            <option value="Mail">Whatsapp</option>
+            <option value="Mail">Teléfono</option>
+          </select>
+        </div>
+        <div>
+          <label for="Comentarios">Comentarios:</label>
+          <textarea
+            name="Comentarios"
+            id="Comentarios"
+            cols="30"
+            rows="4"
+            maxlength="2000"
+          ></textarea>
+        </div>
+        <div>
+          <label for="checkbox">Recibir mails promocionales</label>
+          <input type="checkbox" />
+        </div>
+        <div>
+          <input type="Reset" value="Borrar" />
+          <input type="submit" value="Enviar" />
+        </div>
+      </form>
+    </section>
+    <section>
+      <footer>
+        <section>
+          <ul class="claseFooter">
+            <li><i class="bi bi-facebook"></i></li>
+            <li><i class="bi bi-whatsapp"></i></li>
+            <li><i class="bi bi-instagram"></i></li>
+            <li><i class="bi bi-envelope"></i></li>
+            <li><i class="bi bi-geo-alt"></i></li>
+          </ul>
+        </section>
+        <section class="pieDePagina">
+          <p>Sitio desarrollado por Tania</p>
+        </section>
+      </footer>
+    </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+@media (max-width: 768px) {
+    .secciones {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-areas:
+        "tres cuatro"
+        "uno dos"
+        "cinco  seis";
+      margin: 40px;
+         p {
+        font-size: 30px;
+      }
+    }
+  
+    
+  }
+  
+  @media (max-width: 512px) {
+    .secciones {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(6, 1fr);
+      grid-template-areas:
+        "tres tres"
+        "cuatro cuatro"
+        "dos     dos"
+        "uno    uno"
+        "seis seis"
+        "cinco cinco";
+      margin: 10px;
+           p {
+        font-size: 20px;
+      }
+    }
+  
+  }

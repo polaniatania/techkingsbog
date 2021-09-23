@@ -1,0 +1,58 @@
+/*HEADER*/
+
+ .header {
+    background-color: black;
+    ul {
+        list-style: none;
+        li:hover {
+            -webkit-transform: translate();
+                    transform: translate();
+          }
+      }
+  }
+  
+  
+  .logo img {
+    width: 100px;
+  }
+  
+  .opcionesNav {
+    color: white;
+    font-family: "Cinzel", serif;
+    font-size: 20px;
+    text-decoration: none;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    margin: 20px;
+  }
+  
+  .opcionesNav:hover {
+    color: #fcd8b0;
+  }
+
+  .claseFooter {
+  display: flex;
+  justify-content: center;
+  background-position: bottom;
+  background-size: cover;
+  background-image: url("../multimedia/abstract.png");
+}
+footer 
+     ul {
+  list-style: none;
+       li {
+    font-size: 30px;
+    font-family: "Merienda", cursive;
+    height: 60px;
+    margin: 10px;
+    color: white;
+  }
+}
+
+.pieDePagina {
+  color: rgb(252, 216, 176);
+  font-size: 150%;
+  background-color: black;
+  text-align: center;
+}
