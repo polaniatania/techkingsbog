@@ -210,7 +210,7 @@ ul li {
 }
 
 .preguntas__dos {
-  color: #9c8128;
+  color: #28289c;
 }
 
 .preguntas__tres {
@@ -218,7 +218,7 @@ ul li {
 }
 
 .preguntas__cuatro {
-  color: #00ff2a;
+  color: orange;
 }
 
 @media (max-width: 768px) {
