@@ -1,17 +1,30 @@
 .preguntas {
-    color: rgb(136, 106, 50);
+    display: flex;
+    flex-direction: column;
+    color: rgb(149, 149, 199);
     font-family: "Cinzel", serif;
+    margin: 3rem;
     text-align: center;
 }
 .preguntas__uno {
     color: rgb(182, 162, 53);
 }
 .preguntas__dos {
-    color: rgb(156, 129, 40);
+    color: rgb(182, 162, 53);
 }
 .preguntas__tres {
-    color: white;
+    color: rgb(182, 162, 53);
 }
 .preguntas__cuatro {
-    color: rgb(0, 255, 42);
+    color: rgb(182, 162, 53);
 }
+.preguntas__cinco {
+    color: rgb(182, 162, 53);
+}
+.preguntas__seis {
+    color: rgb(182, 162, 53);
+}
+.respuestas {
+    color: rgb(136, 106, 50);
+}
+
