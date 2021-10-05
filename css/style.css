@@ -84,7 +84,7 @@ ul li {
 
 /* BANNER */
 .banner {
-  margin: 150px;
+  margin: 3%;
 }
 
 /*BODY*/
@@ -207,6 +207,8 @@ ul li {
   font-family: "Cinzel", serif;
   background-color: #b6a235;
   font-weight: bold;
+  max-width: 90%;
+  margin: 2rem auto;
 }
 
 .preguntas {
