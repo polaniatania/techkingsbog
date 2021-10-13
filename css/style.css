@@ -31,7 +31,7 @@ html {
 }
 
 .logo img {
-  width: 100px;
+  width: 9rem;
 }
 
 .opcionesNav {
@@ -85,6 +85,13 @@ ul li {
 /* BANNER */
 .banner {
   margin: 3%;
+}
+
+.bienvenida {
+  font-family: "Cinzel", serif;
+  color: #d8d855;
+  text-align: center;
+  margin: 10rem;
 }
 
 /*BODY*/
@@ -178,52 +185,15 @@ ul li {
   font-family: "Cinzel", serif;
   text-align: center;
   color: #886a32;
+  margin: 3rem;
 }
 
 .principal h1 {
   color: #9595c7;
 }
 
-.seccionesDos {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  padding: 70px;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-
-.iphone {
-  width: 100%;
-  max-width: 1200px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: auto;
-}
-
-.iphone .iphone__uno {
-  width: 100%;
-  border-radius: 8px;
-  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-  margin: 20px;
-  text-align: center;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
+.productosDos {
+  margin: 5rem;
 }
 
 .contacto {
