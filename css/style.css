@@ -91,7 +91,8 @@ ul li {
   font-family: "Cinzel", serif;
   color: #d8d855;
   text-align: center;
-  margin: 10rem;
+  width: 100%;
+  margin: 3rem;
 }
 
 /*BODY*/
@@ -203,7 +204,7 @@ ul li {
   font-family: "Cinzel", serif;
   background-color: #b6a235;
   font-weight: bold;
-  max-width: 90%;
+  max-width: 95%;
   margin: 2rem auto;
 }
 
