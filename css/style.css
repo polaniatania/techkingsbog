@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
 /*  CTRL + K + C COMENT AUTO */
 * {
   margin: 0;
@@ -13,14 +14,10 @@ html {
 }
 
 .fondo {
-  background-color: black;
+  background-image: url(../multimedia/fondo4.jpg);
 }
 
 /*HEADER*/
-.header {
-  background-color: black;
-}
-
 .header ul {
   list-style: none;
 }
@@ -31,7 +28,10 @@ html {
 }
 
 .logo img {
-  width: 9rem;
+  width: 15rem;
+  display: block;
+  margin: auto;
+  padding: 2rem;
 }
 
 .opcionesNav {
@@ -58,19 +58,17 @@ html {
           justify-content: center;
   background-position: bottom;
   background-size: cover;
-  background-image: url("../multimedia/abstract.png");
 }
 
-footer
-ul {
+footer ul {
   list-style: none;
+  background-color: black;
 }
 
-footer
-ul li {
+footer ul li {
   font-size: 30px;
   font-family: "Merienda", cursive;
-  height: 60px;
+  height: 45px;
   margin: 10px;
   color: white;
 }
@@ -88,7 +86,7 @@ ul li {
 }
 
 .bienvenida {
-  font-family: "Cinzel", serif;
+  font-family: 'Abril Fatface', cursive;
   color: #d8d855;
   text-align: center;
   width: 100%;
