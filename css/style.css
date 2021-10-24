@@ -50,6 +50,11 @@ html {
   color: #fcd8b0;
 }
 
+.separador {
+  background-color: white;
+  height: 1px;
+}
+
 .claseFooter {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -68,7 +73,6 @@ footer ul {
 
 footer ul li {
   font-size: 30px;
-  font-family: "Merienda", cursive;
   height: 45px;
   margin: 10px;
   color: #fcd8b0;
@@ -77,8 +81,8 @@ footer ul li {
 .pieDePagina {
   color: #fcd8b0;
   font-size: 150%;
-  background-color: black;
   text-align: center;
+  background-color: black;
 }
 
 /* BANNER */
@@ -87,27 +91,12 @@ footer ul li {
 }
 
 .bienvenida {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  font-family: "Pridi", serif;
+  font-family: 'Pridi', serif;
   color: #fcd8b0;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: black;
-}
-
-.bienvenida h1 {
-  font-size: 4rem;
-}
-
-.bienvenida h2 {
-  font-size: 3rem;
+  text-align: center;
+  background-image: url(../multimedia/acuarela4.png);
+  background-position: center;
+  background-size: cover;
 }
 
 /*BODY*/
@@ -210,11 +199,6 @@ footer ul li {
 
 .productosDos {
   margin: 5rem;
-}
-
-.bienvenidaProductos {
-  color: #b6a235;
-  background-color: black;
 }
 
 .contacto {

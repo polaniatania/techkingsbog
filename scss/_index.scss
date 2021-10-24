@@ -1,83 +1,77 @@
 /* BANNER */
 
 .banner {
-  margin: 5%;
-}
+    margin: 5%;
+  }
 .bienvenida {
-  display: flex;
-  flex-direction: column;
-  font-family: "Pridi", serif;
+  font-family: 'Pridi', serif;
   color: rgb(252, 216, 176);
-  align-items: center;
-  background-color: black;
-  h1 {
-    font-size: 4rem;
-  }
-  h2 {
-    font-size: 3rem;
-  }
+  text-align: center;
+  background-image: url(../multimedia/acuarela4.png);
+  background-position: center;
+  background-size: cover;
 }
-/*BODY*/
+  /*BODY*/
 
 .secciones {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas:
-    "tres tres tres"
-    "cuatro uno uno"
-    "cuatro dos dos";
-  grid-column-gap: 1rem;
-  grid-row-gap: 1rem;
-  padding: 2px;
-  margin: 150px;
-  font-size: 50px;
-  font-family: "Cinzel", serif;
-  text-align: center;
-}
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "tres tres tres"
+      "cuatro uno uno"
+      "cuatro dos dos";
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+    padding: 2px;
+    margin: 150px;
+    font-size: 50px;
+    font-family: "Cinzel", serif;
+    text-align: center;
+  }
 
-.secciones__iphone {
-  grid-area: uno;
-  transition: 1s;
-  background-image: url(../multimedia/iphone.jpg);
-  background-size: cover;
-  background-position: center;
-  height: 350px;
-}
+  .secciones__iphone {
+    grid-area: uno;
+    transition: 1s;
+    background-image: url(../multimedia/iphone.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+  }
+  
+  .secciones__iphone:hover {
+    transform: translate(5px, 5px);
+  }
+  .secciones__macbook {
+    background-image: url(../multimedia/macbook.jpg);
+    background-position: center;
+    background-size: unse;
+    grid-area: tres;
+    transition: 1s;
+    height: 350px;
+  }
 
-.secciones__iphone:hover {
-  transform: translate(5px, 5px);
-}
-.secciones__macbook {
-  background-image: url(../multimedia/macbook.jpg);
-  background-position: center;
-  background-size: unse;
-  grid-area: tres;
-  transition: 1s;
-  height: 350px;
-}
+  .secciones__macbook:hover {
+    transform: translate(5px, 5px);
+  }
 
-.secciones__macbook:hover {
-  transform: translate(5px, 5px);
-}
+  .secciones__ipad {
+    background-image: url(../multimedia/ipad.jpg);
+    background-position: right;
+    grid-area: cuatro;
+    transition: 1s;
+  }
 
-.secciones__ipad {
-  background-image: url(../multimedia/ipad.jpg);
-  background-position: right;
-  grid-area: cuatro;
-  transition: 1s;
-}
-
-.secciones__ipad:hover {
-  transform: translate(5px, 5px);
-}
-.secciones__iwatch {
-  background-image: url(../multimedia/iwatch.jpg);
-  background-position: right;
-  grid-area: dos;
-  transition: 1s;
-  height: 350px;
-}
-.secciones__iwatch:hover {
-  transform: translate(5px, 5px);
-}
+  .secciones__ipad:hover {
+    transform: translate(5px, 5px);
+  }
+  .secciones__iwatch {
+    background-image: url(../multimedia/iwatch.jpg);
+    background-position: right;
+    grid-area: dos;
+    transition: 1s;
+    height: 350px;
+  }
+  .secciones__iwatch:hover {
+    transform: translate(5px, 5px);
+  }
