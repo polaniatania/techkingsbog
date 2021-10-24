@@ -1,7 +1,6 @@
 /*HEADER*/
 
 .header {
-  
   ul {
     list-style: none;
 
@@ -12,12 +11,11 @@
   }
 }
 
-
 .logo img {
   width: 15rem;
-  display: block; 
+  display: block;
   margin: auto;
-  padding: 2rem; 
+  padding: 2rem;
 }
 
 .opcionesNav {
@@ -29,7 +27,6 @@
   transition: all 0.2s ease-in-out;
   position: relative;
   margin: 20px;
-
 }
 
 .opcionesNav:hover {
@@ -52,12 +49,12 @@ footer ul {
     font-family: "Merienda", cursive;
     height: 45px;
     margin: 10px;
-    color: rgb(252, 216, 176);
+    color: #fcd8b0;
   }
 }
 
 .pieDePagina {
-  color: rgb(252, 216, 176);
+  color: #fcd8b0;
   font-size: 150%;
   background-color: black;
   text-align: center;

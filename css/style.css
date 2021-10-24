@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pridi:wght@300&display=swap");
 /*  CTRL + K + C COMENT AUTO */
 * {
   margin: 0;
@@ -70,7 +71,7 @@ footer ul li {
   font-family: "Merienda", cursive;
   height: 45px;
   margin: 10px;
-  color: white;
+  color: #fcd8b0;
 }
 
 .pieDePagina {
@@ -82,15 +83,31 @@ footer ul li {
 
 /* BANNER */
 .banner {
-  margin: 3%;
+  margin: 5%;
 }
 
 .bienvenida {
-  font-family: 'Abril Fatface', cursive;
-  color: #d8d855;
-  text-align: center;
-  width: 100%;
-  margin: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Pridi", serif;
+  color: #fcd8b0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: black;
+}
+
+.bienvenida h1 {
+  font-size: 4rem;
+}
+
+.bienvenida h2 {
+  font-size: 3rem;
 }
 
 /*BODY*/
@@ -181,25 +198,30 @@ footer ul li {
 }
 
 .principal {
-  font-family: "Cinzel", serif;
+  font-family: "Pridi", serif;
   text-align: center;
-  color: #886a32;
+  color: #e0dfdf;
   margin: 3rem;
 }
 
 .principal h1 {
-  color: #9595c7;
+  color: #8ba7a8;
 }
 
 .productosDos {
   margin: 5rem;
 }
 
+.bienvenidaProductos {
+  color: #b6a235;
+  background-color: black;
+}
+
 .contacto {
   font-size: 20px;
   padding: 30px;
   line-height: 23px;
-  font-family: "Cinzel", serif;
+  font-family: "Pridi", serif;
   background-color: #b6a235;
   font-weight: bold;
   max-width: 95%;
@@ -215,37 +237,37 @@ footer ul li {
       -ms-flex-direction: column;
           flex-direction: column;
   color: #9595c7;
-  font-family: "Cinzel", serif;
+  font-family: "Pridi", serif;
   margin: 3rem;
   text-align: center;
 }
 
 .preguntas__uno {
-  color: #b6a235;
+  color: #8ba7a8;
 }
 
 .preguntas__dos {
-  color: #b6a235;
+  color: #8ba7a8;
 }
 
 .preguntas__tres {
-  color: #b6a235;
+  color: #8ba7a8;
 }
 
 .preguntas__cuatro {
-  color: #b6a235;
+  color: #8ba7a8;
 }
 
 .preguntas__cinco {
-  color: #b6a235;
+  color: #8ba7a8;
 }
 
 .preguntas__seis {
-  color: #b6a235;
+  color: #8ba7a8;
 }
 
 .respuestas {
-  color: #886a32;
+  color: #e0dfdf;
 }
 
 @media (max-width: 768px) {
