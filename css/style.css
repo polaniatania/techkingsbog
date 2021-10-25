@@ -83,6 +83,7 @@ footer ul li {
   font-size: 150%;
   text-align: center;
   background-color: black;
+  font-family: "Cinzel", serif;
 }
 
 /* BANNER */
@@ -202,13 +203,20 @@ footer ul li {
 }
 
 .contacto {
-  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 2rem;
   padding: 30px;
   line-height: 23px;
   font-family: "Pridi", serif;
   background-color: #b6a235;
   font-weight: bold;
-  max-width: 95%;
+  max-width: 80%;
   margin: 2rem auto;
 }
 
