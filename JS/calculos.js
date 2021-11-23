@@ -5,10 +5,23 @@ while (nombre == null || nombre == "" || nombre == " ") {
     nombre = prompt("Por favor ingresa tu nombre")
 }
 
-function calculcarSubTotal() {
-    let subTotal = cantIphoneX * precioIphoneX;
-    subTotal += cantIphone12 * precioIphone12;
-    subTotal += cantIphone13 * precioIphone13;
+class Iphone {
+    constructor (modelo, capacidad, color, precio) {
+        this.modelo = modelo;
+        this.capacidad = capacidad;
+        this.color = color;
+        this.precio = precio;
+    }
+}
+
+const producto1 = new Iphone ("IphoneX", "64 GB", "Negro", 1500);
+const producto2 = new Iphone ("Iphone12", "128GB", "Plata", 3000);
+const producto3 = new Iphone ("Iphone13", "64 GB", "Amarillo", 5000);
+
+function calcularSubTotal() {
+    let subTotal = cantIphoneX * producto1.precio;
+    subTotal += cantIphone12 * producto2.precio;
+    subTotal += cantIphone13 * producto3.precio;
 
     return subTotal;
 }
@@ -21,17 +34,14 @@ function calcularTotal(subTotal, iva){
     return subTotal + iva;
 }
 
-const precioIphoneX = 1500;
-const precioIphone12 = 3000;
-const precioIphone13 = 5000;
+const cantIphoneX = parseInt(prompt('¿Cuántos iphone X vas a comprar?'));
+const cantIphone12 = parseInt(prompt('¿Cuántos iphone 12 vas a comprar?'));
+const cantIphone13 = parseInt(prompt('¿Cuántos iphone 13 vas a comprar?'));
 
-const cantIphoneX = parseInt(prompt('¿Cuántos iphone X va a comprar?'));
-const cantIphone12 = parseInt(prompt('¿Cuántos iphone 12 va a comprar?'));
-const cantIphone13 = parseInt(prompt('¿Cuántos iphone 13 va a comprar?'));
-
-const subTotal = calculcarSubTotal();
+const subTotal = calcularSubTotal();
 const iva = calcularIva(subTotal);
 const total = calcularTotal(subTotal, iva);
 
 
-alert('!!!Gracias por su compra!!!\nDetalles de Factura:\nSub Total: ' + subTotal + '\nIVA: '+ iva + '\nTotal:' + total);
+alert('!!!Gracias por tu compra!!!\nDetalles de Factura:\nSub Total: ' + subTotal + '\nIVA: '+ iva + '\nTotal:' + total);
+
