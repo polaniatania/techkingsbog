@@ -45,8 +45,24 @@
     </section>
     <div class="separador"></div>
 
-    <div class="container">
-      <div class="row" id="productos-lista"></div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-9">
+          <div class="row" id="productos-lista"></div>
+        </div>
+        <div class="col-3">
+          <ul class="list-group" id="carrito">
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Tu Carrito esta vacio</div>
+                selecciona algun producto para agregar
+              </div>
+              <span class="badge bg-primary rounded-pill"></span>
+            </li>
+          </ul>
+          <ul class="list-group" id="carrito-totales"></ul>
+        </div>
+      </div>
     </div>
     <div class="separador"></div>
     <footer>

@@ -127,9 +127,74 @@ const productos = [
     },
 ]
 
+const carrito = [];
+
+function calcularSubTotal() {
+    let subTotal = 0;
+    for (const item of carrito) {
+        subTotal += item.precio * item.cantidad;
+    }
+
+    return subTotal;
+}
+
+function calcularIva(subTotal) {
+    return subTotal * (21 / 100);
+}
+
+function calcularTotal(subTotal, iva) {
+    return subTotal + iva;
+}
+
+const guardarLocal = (clave, valor) => {
+    localStorage.removeItem(clave);
+    localStorage.setItem(clave, valor);
+};
+
+function agregarAlCarrito(index, actualizarStorage = true) {
+    const carritoEL = document.getElementById('carrito');
+    const cantidad = document.getElementById(`cantidad-${index}`).value;
+
+    if (carrito.length === 0) {
+        carritoEL.innerHTML = "";
+    }
+
+    const producto = productos[index];
+    console.log('AQUI',productos[index])
+
+    carrito.push({
+        index: index,
+        nombre: producto.nombre,
+        precio: producto.precios,
+        cantidad: cantidad,
+    });
+
+    if(actualizarStorage) {
+        guardarLocal("carrito", JSON.stringify(carrito));
+    }
+
+    const subTotal = calcularSubTotal();
+    const iva = calcularIva(subTotal);
+    const total = calcularTotal(subTotal, iva);
+
+    carritoEL.innerHTML = carritoEL.innerHTML +
+        `<li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">${productos[index].nombre}</div>
+                Valor unitario ${productos[index].precios}
+            </div>
+            <span class="badge bg-primary rounded-pill">${cantidad}</span>
+        </li>`;
+
+    const carritoTotalesEL = document.getElementById('carrito-totales');
+    carritoTotalesEL.innerHTML = `
+        <li class="list-group-item">Sub Total: ${subTotal}</li>
+        <li class="list-group-item">IVA: ${iva}</li>
+        <li class="list-group-item">Total: ${total}</li>`;
+}
+
 const productList = document.getElementById('productos-lista');
 for (let i = 0; i < productos.length; i++) {
-    console.log(productos[i]);
     const productoHijo = document.createElement('div');
     productoHijo.className="col-md-4 col-sm-1 p-2";
     productoHijo.innerHTML = 
@@ -138,6 +203,11 @@ for (let i = 0; i < productos.length; i++) {
             <div class="card-body">
                 <h5 class="card-title">${productos[i].nombre}</h5>
                 <ul class="card-text" id="caracteristicas-${i}"></ul>
+                <div class="input-group mb-3">
+                    <input id="cantidad-${i}" type="text" class="form-control" placeholder="Cantidad" aria-label="Cantidad" aria-describedby="boton-agregar">
+                    <button type="button" class="btn btn-dark" onclick="agregarAlCarrito(${i})">Agregar al carrito</button>
+                </div>
+
             </div>
         </div>`;
     productList.appendChild(productoHijo);
@@ -155,4 +225,9 @@ for (let i = 0; i < productos.length; i++) {
     productoHijo.onmouseout = () => {
         productoHijo.firstChild.classList.remove('border-info')
     }
+}
+
+const carritoStorage = JSON.parse(localStorage.getItem("carrito"));
+for (const item of carritoStorage) {
+    agregarAlCarrito(item.index, false);
 }
