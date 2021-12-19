@@ -220,6 +220,10 @@ footer ul li {
   margin: 2rem auto;
 }
 
+.ocultar {
+  display: none !important;
+}
+
 .preguntas {
   display: -webkit-box;
   display: -ms-flexbox;
