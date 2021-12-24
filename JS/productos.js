@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  const carrito = [];
+  let carrito = [];
   let productos = [];
 
   function calcularSubTotal() {
@@ -24,9 +24,8 @@ $(document).ready(function () {
     localStorage.setItem(clave, valor);
   };
 
-  function agregarAlCarrito(index, actualizarStorage = true) {
+  function agregarAlCarrito(index, cantidad, actualizarStorage = true) {
     const carritoEL = $("#carrito");
-    const cantidad = $(`#cantidad-${index}`).val();
 
     if (carrito.length === 0) {
       carritoEL.html("");
@@ -45,26 +44,58 @@ $(document).ready(function () {
       guardarLocal("carrito", JSON.stringify(carrito));
     }
 
-    const subTotal = calcularSubTotal();
-    const iva = calcularIva(subTotal);
-    const total = calcularTotal(subTotal, iva);
-
     carritoEL.append(
-      `<li class="list-group-item d-flex justify-content-between align-items-start">
+      `<li id="item-${index}" class="list-group-item d-flex justify-content-between align-items-start">
             <div class="ms-2 me-auto">
                 <div class="fw-bold">${productos[index].nombre}</div>
                 Valor unitario ${productos[index].precios}
+                <button id="eliminar-${index}" type="button" class="btn btn-danger"><i class="bi bi-trash"></i></button>
             </div>
             <span class="badge bg-primary rounded-pill">${cantidad}</span>
         </li>`
     );
+    $(`#eliminar-${index}`).click(function () {
+      eliminarDelCarrito(index);
+    });
+
+    calcularCostos();
+  }
+  function eliminarDelCarrito(index) {
+    carrito = carrito.filter(function (item) {
+      return item.index !== index;
+    });
+    console.log(carrito);
+    guardarLocal("carrito", JSON.stringify(carrito));
+    $("#item-" + index).remove();
+
+    calcularCostos();
+  }
+
+  function calcularCostos() {
+    const subTotal = calcularSubTotal();
+    const iva = calcularIva(subTotal);
+    const total = calcularTotal(subTotal, iva);
 
     const carritoTotalesEL = $("#carrito-totales");
-    carritoTotalesEL.html(`
+
+    if (carrito.length > 0) {
+      carritoTotalesEL.html(`
         <li class="list-group-item">Sub Total: ${subTotal}</li>
         <li class="list-group-item">IVA: ${iva}</li>
         <li class="list-group-item">Total: ${total}</li>`);
+    } else {
+      carritoTotalesEL.html("");
+      $("#carrito")
+        .html(`<li class="list-group-item d-flex justify-content-between align-items-start">
+      <div class="ms-2 me-auto">
+        <div class="fw-bold">Tu Carrito esta vacio</div>
+        selecciona algun producto para agregar
+      </div>
+      <span class="badge bg-primary rounded-pill"></span>
+    </li>`);
+    }
   }
+
   $.ajax({
     method: "GET",
     url: "../JS/productos.json",
@@ -90,7 +121,7 @@ $(document).ready(function () {
         );
         productList.append(productoHijo);
         $(`#btn-${i}`).click(function () {
-          agregarAlCarrito(i);
+          agregarAlCarrito(i, $(`#cantidad-${i}`).val());
         });
 
         const caracteristicas = $(`#caracteristicas-${i}`);
@@ -114,7 +145,7 @@ $(document).ready(function () {
 
       const carritoStorage = JSON.parse(localStorage.getItem("carrito"));
       for (const item of carritoStorage) {
-        agregarAlCarrito(item.index, false);
+        agregarAlCarrito(item.index, item.cantidad, false);
       }
     })
     .fail(function (jqXHR, textStatus) {
