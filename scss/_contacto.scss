@@ -5,14 +5,23 @@
   padding: 30px;
   line-height: 23px;
   font-family: "Pridi", serif;
-  background-color: rgb(182, 162, 53);
   font-weight: bold;
   max-width: 80%;
   margin: 2rem auto;
 }
 
+.amarillo {
+  background-color: rgb(182, 162, 53);
+  padding: 2rem;
+}
+
 .ocultar {
-  display: none!important;
+  display: none !important;
+}
 
-
+#map {
+  height: 600px;
+  /* The height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */
 }
